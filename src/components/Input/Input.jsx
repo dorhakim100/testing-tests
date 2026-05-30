@@ -9,11 +9,12 @@ export default function Input() {
       <p>Value: {value}</p>
       <div className='cmp-container'>
         <input
+          placeholder='Type something...'
           type='text'
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <button onClick={() => setValue('')}>Clear</button>
+        <button onClick={() => setValue('')}>Send</button>
       </div>
     </div>
   )
