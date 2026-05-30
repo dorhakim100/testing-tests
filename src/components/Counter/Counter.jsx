@@ -8,14 +8,7 @@ export default function Counter() {
       <h2>Counter</h2>
       <p>{count}</p>
 
-      <div
-        style={{
-          display: 'flex',
-          gap: '10px',
-          justifyContent: 'center',
-          margin: '10px auto',
-        }}
-      >
+      <div className='cmp-container'>
         <button onClick={() => setCount(count - 1)}>-</button>
         <button onClick={() => setCount(count + 1)}>+</button>
       </div>

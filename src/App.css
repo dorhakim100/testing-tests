@@ -182,3 +182,10 @@
     border-right-color: var(--border);
   }
 }
+
+.cmp-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px auto;
+}
