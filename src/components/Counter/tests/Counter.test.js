@@ -9,11 +9,19 @@ test('user clicks increment button and count increases', async () => {
 
   expect(screen.getByText('0')).toBeInTheDocument()
 
-  await user.click(screen.getByRole('button', { name: 'Increment' }))
+  await user.click(screen.getByRole('button', { name: '+' }))
 
   expect(screen.getByText('1')).toBeInTheDocument()
+})
 
-  await user.click(screen.getByRole('button', { name: 'Increment' }))
+test('user clicks decrement button and count decreases', async () => {
+  const user = userEvent.setup()
 
-  expect(screen.getByText('2')).toBeInTheDocument()
+  render(<Counter />)
+
+  expect(screen.getByText('0')).toBeInTheDocument()
+
+  await user.click(screen.getByRole('button', { name: '-' }))
+
+  expect(screen.getByText('-1')).toBeInTheDocument()
 })

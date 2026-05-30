@@ -7,7 +7,18 @@ export default function Counter() {
     <div>
       <h2>Counter</h2>
       <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+
+      <div
+        style={{
+          display: 'flex',
+          gap: '10px',
+          justifyContent: 'center',
+          margin: '10px auto',
+        }}
+      >
+        <button onClick={() => setCount(count - 1)}>-</button>
+        <button onClick={() => setCount(count + 1)}>+</button>
+      </div>
     </div>
   )
 }
