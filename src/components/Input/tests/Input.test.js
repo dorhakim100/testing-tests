@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Input from '../Input'
 
-test('user types in input and sends value', async () => {
+test('clears the input after the user sends a value', async () => {
   const user = userEvent.setup()
 
   const defaultValue = 'Hello World'
